@@ -19,3 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/time', [App\Http\Controllers\TimeController::class, 'getTime']);
+
+Route::post("/register", [App\Http\Controllers\AuthController::class, "register"])->name('register');
+Route::post("/login", [App\Http\Controllers\AuthController::class, "login"])->name('login');
+Route::get("/logout", [App\Http\Controllers\AuthController::class, "logout"])->name('logout');
+Route::get('/confirm', [App\Http\Controllers\AuthController::class, 'confirm'])->name('confirm');
+Route::post('/refresh', [App\Http\Controllers\AuthController::class, 'refresh'])->name('refresh');

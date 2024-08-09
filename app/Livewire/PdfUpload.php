@@ -44,6 +44,7 @@ class PdfUpload extends Component
         ProcessPdfJob::dispatch($this->sid);
 
         $this->dispatch('loadPdfDisplay', $this->path);
+        $this->dispatch('PdfScanningStarted');
     }
 
     #[On('echo:pdf-channel.{sid},ProcessPdfEvent')]

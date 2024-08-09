@@ -16,7 +16,6 @@
             <div class="col"> 
                 @livewire('pdf-results')
             </div> 
-        </div> 
+        </div>
     </div> 
 </div>
-@endsection

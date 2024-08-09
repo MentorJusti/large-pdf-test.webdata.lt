@@ -2,7 +2,6 @@
 
 namespace App\Events;
 
-use Illuminate\Support\Facades\Log;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -23,7 +22,7 @@ class ProcessPdfEvent implements ShouldBroadcast
     }
  
     public function broadcastOn(): Channel
-    { 
+    {
         return new Channel('pdf-channel.'.$this->sid);
     }
 }
